@@ -118,6 +118,8 @@ MIT
 - [Snippets para Visual Studio Code y Joomla](https://www.sergioiglesias.net/blog/joomla/418-snippets-para-visual-studio-code-y-joomla)
 
 
+===
+
 # Eclipse IDE Joomla Snippets
 
 This fork includes snippets.xml file.
