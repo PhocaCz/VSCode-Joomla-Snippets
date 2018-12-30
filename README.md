@@ -116,3 +116,21 @@ MIT
 ## Acknowledgements
 
 - [Snippets para Visual Studio Code y Joomla](https://www.sergioiglesias.net/blog/joomla/418-snippets-para-visual-studio-code-y-joomla)
+
+
+# Eclipse IDE Joomla Snippets
+
+This fork includes snippets.xml file.
+
+Snippets.xml is a copy of snippets.json working in Eclipse IDE.
+
+Eclipse IDE does not have snippets so importing snippets into Eclipse is different compared with Visual Studio Code. Also handling variables inside the snippet is different (for example, there are no comments possible, variables cannot include common text, etc.)
+
+##How to import (Eclipse IDE)
+
+- Download this file snippets.xml
+- Eclipse IDE: Window - Preferences - PHP -> Editor -> Templates - click on Import button and select snippets.xml
+
+![Eclipse IDE Parameters](https://i.imgur.com/9EhmvmH.png)
+
+
