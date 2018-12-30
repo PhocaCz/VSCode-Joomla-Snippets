@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+	<templates>
+		<template autoinsert="true" context="php" deleted="false" description="Standard Joomla function declaration." id="org.eclipse.php.ui.editor.templates.php.j-function" enabled="true" name="J - Add a Function Docblock and Declaration">/**
+ * ${1}
+ *
+ * @param   string   ${aParam}  Param
+ *
+ * @return  void
+ */
+public function ${2}()
+{
+	${3}
+}</template>
+
+		<template autoinsert="true" context="php" deleted="false" description="Add a module position to a template." id="org.eclipse.php.ui.editor.templates.php.j-module-position" enabled="true" name="J - Add a module position to a template">&lt;jdoc:include type=&quot;modules&quot; name=&quot;${1_Type_the_module_position}&quot; style=&quot;${2_Type_the_module_style};&quot;&gt;&lt;/jdoc:include&gt;</template>
+
+		<template autoinsert="true" context="php" deleted="false" description="Declaration of the component helper and params retrieval." id="org.eclipse.php.ui.editor.templates.php.j-component-params-backend-cli" enabled="true" name="J3 - Add a Component Params - Backend declaration">${dollar}params = JComponentHelper::getParams('${1_com_component}');</template>
+
+		<template autoinsert="true" context="php" deleted="false" description="Declaration of the component helper and params retrieval." id="org.eclipse.php.ui.editor.templates.php.j-component-params-frontend" enabled="true" name="J3 - Add a Component Params - Frontend declaration">${dollar}app = JFactory::getApplication();
+${dollar}params = ${dollar}app-&gt;getParams('${1_com_component}');</template>
+
+		<template autoinsert="true" context="php" deleted="false" description="Adds a deferred remote stylesheet to the page, to start optimizing load of files." id="org.eclipse.php.ui.editor.templates.php.j-stylesheet-remote-defer" enabled="true" name="J3 - Add a deferred CSS StyleSheet">${dollar}script = '!function(e){var t=document.createElement(&quot;link&quot;);t.rel=&quot;stylesheet&quot;,t.href=&quot;${1_Stylesheet_URL}&quot;,t.type=&quot;text/css&quot;;var n=document.getElementsByTagName(&quot;link&quot;)[0];n.parentNode.insertBefore(t,n)}();';
+JFactory::getDocument()-&gt;addScriptDeclaration(${dollar}script);</template>
+
+		<template autoinsert="true" context="php" deleted="false" description="Adds a deferred script to the page, to start optimizing load of files." id="org.eclipse.php.ui.editor.templates.php.j-script" enabled="true" name="J3 - Add a deferred extension JavaScript file">JHtml::script('${1_Extension_Script_for_example_mod_myext_test_min_js}', ['relative' =&gt; true], ['defer' =&gt; true]);</template>
+
+		<template autoinsert="true" context="php" deleted="false" description="Adds a deferred remote script to the page, to start optimizing load of files." id="org.eclipse.php.ui.editor.templates.php.j-script-remote-defer" enabled="true" name="J3 - Add a deferred remote JavaScript file">JFactory::getDocument()-&gt;addScript('${1_Remote_URL}', [], ['defer' =&gt; true, 'crossorigin' =&gt; 'anonymous']);</template>
+
+		<template autoinsert="true" context="php" deleted="false" description="Adds the Joomla document variable declaration." id="org.eclipse.php.ui.editor.templates.php.j-document" enabled="true" name="J3 - Add a Document declaration">${dollar}doc = JFactory::getDocument();</template>
+
+		<template autoinsert="true" context="php" deleted="false" description="Method to determine a hash for anti-spoofing variable names." id="org.eclipse.php.ui.editor.templates.php.j-formtoken" enabled="true" name="J3 - Add a Form Token declaration">${dollar}token = JFactory::getSession()-&gt;getFormToken()</template>
+
+		<template autoinsert="true" context="php" deleted="false" description="Method to add an entry to one custom log file." id="org.eclipse.php.ui.editor.templates.php.j-log" enabled="true" name="J3 - Add a Log call">JLog::addLogger(array('logger' =&gt; 'formattedtext', 'text_file' =&gt; '${1_File_name}.log.php'), JLog::ALL, array('${1_com_example}.log'));
+JLog::add('Message ... ', JLog::INFO, '${1_com_example}.log');</template>
+
+		<template autoinsert="true" context="php" deleted="false" description="Adds an absolute URL to link a versiones template stylesheet to the page." id="org.eclipse.php.ui.editor.templates.php.j-stylesheet-remote" enabled="true" name="J3 - Add a remote CSS StyleSheet, with version">JFactory::getDocument()-&gt;addStyleSheetVersion(JUri::base() . '/templates/${1_Your_Template_Name}/${2_Your_css_address}');</template>
+
+		<template autoinsert="true" context="php" deleted="false" description="Adds a linked template script to the page with a version to allow to flush it." id="org.eclipse.php.ui.editor.templates.php.j-script-remote" enabled="true" name="J3 - Add a remote JavaScript file, with version">JFactory::getDocument()-&gt;addScriptVersion(JUri::base() . '/templates/${1_Your_Template_Name}/${2_Your_js_script_address}');</template>
+
+		<template autoinsert="true" context="php" deleted="false" description="Expand a JText for Joomla 3. Translates a string into the current language." id="org.eclipse.php.ui.editor.templates.php.j-text" enabled="true" name="J3 - Add a Text translation call">echo JText::_('${1}');</template>
+
+		<template autoinsert="true" context="php" deleted="false" description="Adds the Joomla Factory app variable declaration." id="org.eclipse.php.ui.editor.templates.php.j-application" enabled="true" name="J3 - Add an Application declaration">${dollar}app = JFactory::getApplication();</template>
+
+		<template autoinsert="true" context="php" deleted="false" description="Adds the JArrayHelper declaration." id="org.eclipse.php.ui.editor.templates.php.j-arrayhelper" enabled="true" name="J3 - Add an ArrayHelper declaration">${dollar}extra = JArrayHelper::toString(${dollar}attrs);</template>
+
+		<template autoinsert="true" context="php" deleted="false" description="Adds a stylesheet." id="org.eclipse.php.ui.editor.templates.php.j-stylesheet" enabled="true" name="J3 - Add an extension CSS StyleSheet, with version">JHtml::stylesheet('${1_Extension_Script_for_example_mod_myext_test_min_css}', ['version' =&gt; 'auto', 'relative' =&gt; true]);</template>
+
+		<template autoinsert="true" context="php" deleted="false" description="Adds an inline stylesheet declaration to the page, to start reducing the number of loaded files." id="org.eclipse.php.ui.editor.templates.php.j-stylesheet-inline" enabled="true" name="J3 - Add an inline CSS Style fron an extension file">${dollar}filePath = JHTMLHelper::stylesheet('mod_.../....min.css', ['version' =&gt; 'auto', 'relative' =&gt; true, 'pathOnly' =&gt; true]);
+JFactory::getDocument()-&gt;addStyleDeclaration(file_get_contents(JPATH_ROOT . ${dollar}filePath));</template>
+
+		<template autoinsert="true" context="php" deleted="false" description="Adds an inline script to the page, to start reducing the number of loaded files." id="org.eclipse.php.ui.editor.templates.php.j-script-inline" enabled="true" name="J3 - Add an inline JavaScript from an extension script">${dollar}filePath = JHtml::script('mod_.../....min.js', ['version' =&gt; 'auto', 'relative' =&gt; true, 'pathOnly' =&gt; true]);
+JFactory::getDocument()-&gt;addScriptDeclaration(file_get_contents(JPATH_ROOT . ${dollar}filePath));</template>
+
+		<template autoinsert="true" context="php" deleted="false" description="Adds the Joomla Factory declaration." id="org.eclipse.php.ui.editor.templates.php.j-factory" enabled="true" name="J3 - Add J-Factory">JFactory::${1};</template>
+
+		<template autoinsert="true" context="php" deleted="false" description="Adds the Joomla Registry declaration." id="org.eclipse.php.ui.editor.templates.php.j-registry" enabled="true" name="J3 - Add J-Registry">${dollar}registry = new JRegistry;</template>
+
+		<template autoinsert="true" context="php" deleted="false" description="Common template header variables for Joomla 3." id="org.eclipse.php.ui.editor.templates.php.j-template-head" enabled="true" name="J3 - Add J-Template Headers declaration">defined('_JEXEC') or die;
+${dollar}app = JFactory::getApplication();
+${dollar}doc = JFactory::getDocument();
+${dollar}user = JFactory::getUser();
+${dollar}this-&gt;language = ${dollar}doc-&gt;language;
+${dollar}this-&gt;direction = ${dollar}doc-&gt;direction;</template>
+
+		<template autoinsert="true" context="php" deleted="false" description="Adds the Joomla URI declaration, to get the Base URI." id="org.eclipse.php.ui.editor.templates.php.j-uri-base" enabled="true" name="J3 - Add J-Uri Base declaration">${dollar}base = JUri::base();</template>
+
+		<template autoinsert="true" context="php" deleted="false" description="Adds the Joomla URI declaration, to get the Root URI." id="org.eclipse.php.ui.editor.templates.php.j-uri-root" enabled="true" name="J3 - Add J-Uri Root declaration">${dollar}root = JUri::root();</template>
+
+		<template autoinsert="true" context="php" deleted="false" description="Adds the Joomla Factory declaration and the app variable declaration." id="org.eclipse.php.ui.editor.templates.php.j-user" enabled="true" name="J3 - Add J-User declaration">${dollar}user = JFactory::getUser();</template>
+
+		<template autoinsert="true" context="php" deleted="false" description="Declaration of the JInput." id="org.eclipse.php.ui.editor.templates.php.j-input" enabled="true" name="J3 - Add Web J-Input declaration">${dollar}input = new JInput;</template>
+
+		<template autoinsert="true" context="php" deleted="false" description="Declaration of the component helper and params retrieval." id="org.eclipse.php.ui.editor.templates.php.j4-component-params-backend-cli" enabled="true" name="J4 - Add a Component Params - Backend declaration">use Joomla\CMS\Component\ComponentHelper;
+
+${dollar}params = ComponentHelper::getParams('${1_com_component}');</template>
+
+		<template autoinsert="true" context="php" deleted="false" description="Declaration of the component helper and params retrieval." id="org.eclipse.php.ui.editor.templates.php.j4-component-params-frontend" enabled="true" name="J4 - Add a Component Params - Frontend declaration">use Joomla\CMS\Factory as CMSFactory;
+
+${dollar}app = CMSFactory::getApplication();
+${dollar}params = ${dollar}app-&gt;getParams('${1_com_component}');</template>
+
+		<template autoinsert="true" context="php" deleted="false" description="Adds a deferred remote stylesheet to the page, to start optimizing load of files." id="org.eclipse.php.ui.editor.templates.php.j4-stylesheet-remote-defer" enabled="true" name="J4 - Add a deferred CSS StyleSheet">use Joomla\CMS\Factory as CMSFactory;
+use Joomla\CMS\HTML\HTMLHelper as CMSHTMLHelper;
+
+${dollar}script = '!function(e){var t=document.createElement(&quot;link&quot;);t.rel=&quot;stylesheet&quot;,t.href=&quot;${1_Stylesheet_URL}&quot;,t.type=&quot;text/css&quot;;var n=document.getElementsByTagName(&quot;link&quot;)[0];n.parentNode.insertBefore(t,n)}();';
+CMSFactory::getDocument()-&gt;addScriptDeclaration(${dollar}script);</template>
+
+		<template autoinsert="true" context="php" deleted="false" description="Adds a deferred extension script to the page, to start optimizing load of files." id="org.eclipse.php.ui.editor.templates.php.j4-script" enabled="true" name="J4 - Add a deferred extension JavaScript file">use Joomla\CMS\HTML\HTMLHelper as CMSHTMLHelper;
+
+CMSHTMLHelper::script('${1_Extension_Script_for_example_mod_myext_test_min_js}', ['relative' =&gt; true], ['defer' =&gt; true]);</template>
+
+		<template autoinsert="true" context="php" deleted="false" description="Adds a deferred remote script to the page, to start optimizing load of files." id="org.eclipse.php.ui.editor.templates.php.j4-script-remote-defer" enabled="true" name="J4 - Add a deferred remote JavaScript file">use Joomla\CMS\HTML\HTMLHelper as CMSHTMLHelper;
+
+CMSFactory::getDocument()-&gt;addScript('${1_Remote_URL}', [], ['defer' =&gt; true, 'crossorigin' =&gt; 'anonymous']);</template>
+
+		<template autoinsert="true" context="php" deleted="false" description="Adds the Joomla Factory declaration and the document variable declaration." id="org.eclipse.php.ui.editor.templates.php.j4-document" enabled="true" name="J4 - Add a Document declaration">use Joomla\CMS\Factory as CMSFactory;
+
+${dollar}doc = CMSFactory::getDocument();</template>
+
+		<template autoinsert="true" context="php" deleted="false" description="Method to determine a hash for anti-spoofing variable names." id="org.eclipse.php.ui.editor.templates.php.j4-formtoken" enabled="true" name="J4 - Add a Form Token declaration">use Joomla\CMS\Factory as CMSFactory;
+
+${dollar}token = CMSFactory::getSession()-&gt;getFormToken()</template>
+
+		<template autoinsert="true" context="php" deleted="false" description="Method to add an entry to one custom log file." id="org.eclipse.php.ui.editor.templates.php.j4-log" enabled="true" name="J4 - Add a Log call">use Joomla\CMS\Log\Log as CMSLog;
+
+CMSLog::addLogger(array('logger' =&gt; 'formattedtext', 'text_file' =&gt; '${1_File_name}.log.php'), CMSLog::ALL, array('${1_com_example}.log'));
+CMSLog::add('Message ... ', CMSLog::INFO, '${1_com_example}.log');</template>
+
+		<template autoinsert="true" context="php" deleted="false" description="Adds an absolute URL to link a versiones template stylesheet to the page." id="org.eclipse.php.ui.editor.templates.php.j4-stylesheet-remote" enabled="true" name="J4 - Add a remote CSS StyleSheet, with version">use Joomla\CMS\Factory as CMSFactory;
+use Joomla\CMS\Uri\Uri as CMSUri;
+
+CMSFactory::getDocument()-&gt;addStyleSheetVersion(CMSUri::base() . '/templates/${1_Your_Template_Name}/${2_Your_css_address}');</template>
+
+		<template autoinsert="true" context="php" deleted="false" description="Adds a linked template script to the page with a version to allow to flush it." id="org.eclipse.php.ui.editor.templates.php.j4-script-remote" enabled="true" name="J4 - Add a remote JavaScript file, with version">use Joomla\CMS\Factory as CMSFactory;
+use Joomla\CMS\Uri\Uri as CMSUri;
+
+CMSFactory::getDocument()-&gt;addScriptVersion(CMSUri::base() . '/templates/${1_Your_Template_Name}/${2_Your_js_script_address}');</template>
+
+		<template autoinsert="true" context="php" deleted="false" description="Declares the text translation helper (a.k.a JText::_)." id="org.eclipse.php.ui.editor.templates.php.j4-text-translation" enabled="true" name="J4 - Add a Text translation call">use Joomla\CMS\Language\Text as CMSText;
+
+${l} = CMSText::_('${1_COM_EXAMPLE_A_LABEL}')</template>
+
+		<template autoinsert="true" context="php" deleted="false" description="Adds the Joomla Factory declaration and the app variable declaration." id="org.eclipse.php.ui.editor.templates.php.j4-application" enabled="true" name="J4 - Add an Application declaration">use Joomla\CMS\Factory as CMSFactory;
+
+${dollar}app = CMSFactory::getApplication();</template>
+
+		<template autoinsert="true" context="php" deleted="false" description="Adds the ArrayHelper declaration." id="org.eclipse.php.ui.editor.templates.php.j4-arrayhelper" enabled="true" name="J4 - Add an ArrayHelper declaration">use Joomla\Utilities\ArrayHelper;</template>
+
+		<template autoinsert="true" context="php" deleted="false" description="Adds a stylesheet." id="org.eclipse.php.ui.editor.templates.php.j4-stylesheet" enabled="true" name="J4 - Add an extension CSS StyleSheet, with version">use Joomla\CMS\HTML\HTMLHelper as CMSHTMLHelper;
+
+JHtml::stylesheet('${1_Extension_Script_for_example_mod_myext_test_min_css}', ['version' =&gt; 'auto', 'relative' =&gt; true]);</template>
+
+		<template autoinsert="true" context="php" deleted="false" description="Adds an inline stylesheet declaration to the page, to start reducing the number of loaded files." id="org.eclipse.php.ui.editor.templates.php.j4-stylesheet-inline" enabled="true" name="J4 - Add an inline CSS Style fron an extension file">use Joomla\CMS\Factory as CMSFactory;
+use Joomla\CMS\HTML\HTMLHelper as CMSHTMLHelper;
+
+${dollar}filePath = CMSHTMLHelper::stylesheet('mod_.../....min.css', ['version' =&gt; 'auto', 'relative' =&gt; true, 'pathOnly' =&gt; true]);
+CMSFactory::getDocument()-&gt;addStyleDeclaration(file_get_contents(JPATH_ROOT . ${dollar}filePath));</template>
+
+		<template autoinsert="true" context="php" deleted="false" description="Adds an inline script to the page, to start reducing the number of loaded files." id="org.eclipse.php.ui.editor.templates.php.j4-script-inline" enabled="true" name="J4 - Add an inline JavaScript from an extension script">use Joomla\CMS\Factory as CMSFactory;
+use Joomla\CMS\HTML\HTMLHelper as CMSHTMLHelper;
+
+${dollar}filePath = CMSHTMLHelper::script('mod_.../....min.js', ['version' =&gt; 'auto', 'relative' =&gt; true, 'pathOnly' =&gt; true]);
+CMSFactory::getDocument()-&gt;addScriptDeclaration(file_get_contents(JPATH_ROOT . ${dollar}filePath));</template>
+
+		<template autoinsert="true" context="php" deleted="false" description="Adds the Joomla Factory declaration." id="org.eclipse.php.ui.editor.templates.php.j4-factory" enabled="true" name="J4 - Add J-Factory">use Joomla\CMS\Factory as CMSFactory;
+
+CMSFactory::${1};</template>
+
+		<template autoinsert="true" context="php" deleted="false" description="Adds the Joomla Registry declaration." id="org.eclipse.php.ui.editor.templates.php.j4-registry" enabled="true" name="J4 - Add J-Registry">use Joomla\Registry\Registry as CMSRegistry;
+
+${dollar}registry = new CMSRegistry;</template>
+
+		<template autoinsert="true" context="php" deleted="false" description="Common template header variables for Joomla 3." id="org.eclipse.php.ui.editor.templates.php.j4-template-head" enabled="true" name="J4 - Add J-Template Headers declaration">defined('_JEXEC') or die;
+use Joomla\CMS\Factory as CMSFactory;
+${dollar}app = CMSFactory::getApplication();
+${dollar}doc = CMSFactory::getDocument();
+${dollar}user = CMSFactory::getUser();
+${dollar}this-&gt;language = ${dollar}doc-&gt;language;
+${dollar}this-&gt;direction = ${dollar}doc-&gt;direction;</template>
+
+		<template autoinsert="true" context="php" deleted="false" description="Adds the Joomla URI declaration, to get the Base URI." id="org.eclipse.php.ui.editor.templates.php.j4-uri-base" enabled="true" name="J4 - Add J-Uri Base declaration">use Joomla\CMS\Uri\Uri as CMSUri;
+
+${dollar}base = CMSUri::base();</template>
+
+		<template autoinsert="true" context="php" deleted="false" description="Adds the Joomla URI declaration, to get the Root URI." id="org.eclipse.php.ui.editor.templates.php.j4-uri-root" enabled="true" name="J4 - Add J-Uri Root declaration">use Joomla\CMS\Uri\Uri as CMSUri;
+
+${dollar}root = CMSUri::root();</template>
+
+		<template autoinsert="true" context="php" deleted="false" description="Adds the Joomla Factory declaration and the app variable declaration." id="org.eclipse.php.ui.editor.templates.php.j4-user" enabled="true" name="J4 - Add J-User declaration">use Joomla\CMS\Factory as CMSFactory;
+
+${dollar}user = CMSFactory::getUser();</template>
+
+		<template autoinsert="true" context="php" deleted="false" description="Declaration of the JInput." id="org.eclipse.php.ui.editor.templates.php.j4-input" enabled="true" name="J4 - Add Web J-Input declaration">use Joomla\CMS\Input\Input as CMSWebInput;
+
+${dollar}input = new CMSWebInput;</template>
+
+	</templates>
