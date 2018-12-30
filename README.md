@@ -136,5 +136,5 @@ Eclipse IDE does not have snippets so importing snippets into Eclipse is differe
 
 ![Eclipse IDE Parameters](https://i.imgur.com/9EhmvmH.png)
 
-![Eclipse ID Code Template](https://i.imgur.com/2nMzNPw.png)
+![Eclipse ID Code Template](https://i.imgur.com/U5nDsAp.png)
 
