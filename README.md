@@ -123,6 +123,7 @@ MIT
 # Eclipse IDE Joomla Snippets
 
 This fork includes snippets.xml file.
+https://github.com/PhocaCz/VSCode-Joomla-Snippets/blob/master/src/snippets.xml
 
 Snippets.xml is a copy of snippets.json working in Eclipse IDE.
 
