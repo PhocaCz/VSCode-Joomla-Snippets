@@ -134,8 +134,7 @@ Eclipse IDE does not have snippets so importing snippets into Eclipse is differe
 - Download this file (snippets.xml)
 - Eclipse IDE: Window - Preferences - PHP -> Editor -> Templates - click on *Import* button and select snippets.xml file
 
-![Eclipse IDE Parameters](https://i.imgur.com/9EhmvmH.png)
+![Eclipse IDE Parameters](i.imgur.com/2nMzNPw.png)
 
 ![Eclipse ID Code Template](https://i.imgur.com/uVpMkKg.png)
-
 
